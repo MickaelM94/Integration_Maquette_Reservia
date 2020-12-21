@@ -1,0 +1,246 @@
+/* ------- BASIC SECTIONS ------- */
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  padding: 0px 30px;
+}
+
+h2 {
+  display: inline;
+}
+
+/* ------- NAV ------- */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav > ul > li {
+  display: inline;
+  float: right;
+  text-decoration: none;
+  padding: 20px 30px;
+  transition-duration: 0.4s;
+}
+
+nav > ul > li:hover {
+  padding: 18px 30px;
+  border-top: solid 2px #0065FC;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ------- POPULAR ------- */
+
+.popularBlock {
+    background-color: #F2F2F2;
+    padding: 30px;
+}
+
+.popularIcone {
+  float: right;
+  font-size: 24px;
+}
+
+.popularList {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.popularCard {
+  display: flex;
+  padding: 6px;
+  border-radius: 20px;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  box-shadow: 2px 4px 10px 7px rgba(113,113,113,0.1);
+}
+
+.popularCard > img {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  object-fit: cover;
+  height: 140px;
+  width: 140px;
+}
+
+.popularCardText {
+  padding: 10px 20px;
+}
+
+.popularCardText > * {
+  margin: -1px 0px;
+}
+
+.popularTitle {
+  font-weight: bold;
+}
+
+/* ------- HOUSING ------- */
+
+.housingBlock {
+  border-radius: 20px;
+  padding: 30px;}
+
+
+.housingList {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  padding: 20px 0px;
+}
+
+.housingCard {
+  padding: 6px;
+  border-radius: 20px;
+  background-color: white;
+  width: 100%;
+  box-shadow: 2px 4px 10px 7px rgba(113,113,113,0.1);
+}
+
+.housingCard > img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+  height: 120px;
+  width: 100%;
+}
+
+.housingCardText {
+  padding: 5px;
+}
+
+.housingCardText > * {
+  margin: -1px 0px;
+}
+
+.housingTitle {
+  font-weight: bold;
+}
+
+/* ------- ACTIVITY ------- */
+
+.activityBlock {
+padding: 0px 30px 30px 30px;
+}
+
+.activityList {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 25px;
+  padding: 20px 0px;
+}
+
+.activityCard {
+  padding: 6px;
+  border-radius: 20px;
+  background-color: white;
+  width: 100%;
+  box-shadow: 2px 4px 10px 7px rgba(113,113,113,0.1);
+
+}
+
+.activityCard > img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+  height: 150px;
+  width: 100%;
+
+}
+
+.activityCardText {
+  padding: 1px 10px;
+  font-weight: bold;
+}
+
+/* ------- OTHERS ------- */
+
+.searchBar {
+  width: auto;
+  background-color: gold;
+  opacity: 0.4;
+  margin-bottom: 10px;
+}
+
+.filters {
+  width: auto;
+  background-color: gold;
+  opacity: 0.4;
+}
+
+.infoIcone {
+  margin-right: 10px;
+  border-radius: 500px;
+}
+
+.showMore,
+.price {
+  font-weight: bold;
+}
+
+.ratingTrue {
+  display: inline;
+  font-size: 10px;
+  color: blue;
+}
+
+.ratingFalse {
+  display: inline;
+  font-size: 10px;
+  color: lightgrey;
+}
+
+/* ------- FOOTER ------- */
+
+footer {
+  background-color: #F2F2F2;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+footer > div {
+  margin-bottom: 40px;
+}
+
+.footerTitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+footer > div > ul {
+  margin-left: -40px;
+}
+
+footer > div > ul > li > a {
+  text-decoration: none;
+  line-height: 25px;
+  color: black;
+  transition-duration: 0.2s;
+}
+
+footer > div > ul > li > a:hover {
+  text-decoration: none;
+  line-height: 25px;
+  color: grey;
+}
+
+footer > div > ul > li {
+  text-decoration: none;
+  list-style: none;
+}
+
