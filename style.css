@@ -1,6 +1,6 @@
 /* ------- BASIC SECTIONS ------- */
 * {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -28,11 +28,12 @@ nav > ul > li {
   float: right;
   text-decoration: none;
   padding: 20px 30px;
+  transition-duration: 0.4s;
 }
 
 nav > ul > li:hover {
   padding: 18px 30px;
-  border-top: solid 2px #0065fc;
+  border-top: solid 2px #0065FC;
 }
 
 nav > ul > li > a {
@@ -40,110 +41,11 @@ nav > ul > li > a {
   color: black;
 }
 
-/* ------- SEARCH BAR ------- */
-
-form {
-  color: black;
-  padding: 10px 0px;
-  width: 100%;
-}
-
-.searchBar {
-  margin-bottom: 10px;
-}
-
-.searchIcone {
-  border: none;
-  padding: 18px 18px 18px 22px;
-  font-size: 18px;
-  background-color: #f2f2f2;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  margin-right: -4px;
-}
-
-.searchText {
-  border: 2px solid #F2F2F2;
-  padding: 16px;
-  font-size: 18px;
-  font-weight: bold;
-  color: black;
-}
-
-.searchText::placeholder {
-  color: black;
-}
-
-.searchBtn {
-  border-radius: 15px;
-  background-color: #0065FC;
-  color: white;
-  border: none;
-  padding: 18px;
-  font-size: 18px;
-  margin-left: -18px;
-  cursor: pointer;
-}
-
-/* ------- FILTER ------- */
-
-.filterList {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0px 0px 10px 0px;
-  row-gap: 15px;
-  column-gap: 15px;
-}
-
-.filterCard {
-  display: block;
-  border: 2px solid #d1d0d0c7;
-  border-left: none;
-  padding: 16px 18px 16px 0px;
-  border-radius: 70px;
-  transition-duration: 0.2s;
-}
-
-.filterCard:hover {
-  display: block;
-  border: 2px solid #DEEBFF;
-  background-color: #DEEBFF;
-  border-left: none;
-  padding: 16px 18px 16px 0px;
-  border-radius: 70px;
-  transition-duration: 0.2s;
-}
-
-.filterIcone {
-  padding: 18px;
-  margin-left: -1px;
-  font-size: 18px;
-  background-color: #DEEBFF;
-  border-radius: 50px;
-  color: #0065FC;
-}
-
-.filterText {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  margin-left: 10px;
-  transition-duration: 0.2s;
-}
-
-.filterText:hover {
-  text-decoration: none;
-  color: #0065FC;
-  font-weight: bold;
-  margin-left: 10px;
-  transition-duration: 0.2s;
-}
-
 /* ------- POPULAR ------- */
 
 .popularBlock {
-  background-color: #f2f2f2;
-  padding: 30px;
+    background-color: #F2F2F2;
+    padding: 30px;
 }
 
 .popularIcone {
@@ -155,7 +57,7 @@ form {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 15px;
+  row-gap: 10px;
 }
 
 .popularCard {
@@ -165,8 +67,7 @@ form {
   background-color: white;
   width: 100%;
   height: auto;
-  border: 0.5px solid #F2F2F2 ;
-  box-shadow: 2px 4px 7px 7px rgba(113, 113, 113, 0.1);
+  box-shadow: 2px 4px 10px 7px rgba(113,113,113,0.1);
 }
 
 .popularCard > img {
@@ -193,13 +94,13 @@ form {
 
 .housingBlock {
   border-radius: 20px;
-  padding: 30px;
-}
+  padding: 30px;}
+
 
 .housingList {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 15px;
+  row-gap: 10px;
   padding: 20px 0px;
 }
 
@@ -208,8 +109,7 @@ form {
   border-radius: 20px;
   background-color: white;
   width: 100%;
-  border: 0.5px solid #F2F2F2 ;
-  box-shadow: 2px 4px 7px 7px rgba(113, 113, 113, 0.1);
+  box-shadow: 2px 4px 10px 7px rgba(113,113,113,0.1);
 }
 
 .housingCard > img {
@@ -235,7 +135,7 @@ form {
 /* ------- ACTIVITY ------- */
 
 .activityBlock {
-  padding: 0px 30px 30px 30px;
+padding: 0px 30px 30px 30px;
 }
 
 .activityList {
@@ -246,11 +146,12 @@ form {
 }
 
 .activityCard {
+  padding: 6px;
   border-radius: 20px;
   background-color: white;
   width: 100%;
-  border: 0.5px solid #F2F2F2 ;
-  box-shadow: 2px 4px 7px 7px rgba(113, 113, 113, 0.1);
+  box-shadow: 2px 4px 10px 7px rgba(113,113,113,0.1);
+
 }
 
 .activityCard > img {
@@ -259,14 +160,22 @@ form {
   object-fit: cover;
   height: 150px;
   width: 100%;
+
 }
 
 .activityCardText {
-  padding: 1px 20px;
+  padding: 1px 10px;
   font-weight: bold;
 }
 
 /* ------- OTHERS ------- */
+
+.searchBar {
+  width: auto;
+  background-color: gold;
+  opacity: 0.4;
+  margin-bottom: 10px;
+}
 
 .filters {
   width: auto;
@@ -277,7 +186,6 @@ form {
 .infoIcone {
   margin-right: 10px;
   border-radius: 500px;
-  color: #0065FC;
 }
 
 .showMore,
@@ -300,7 +208,7 @@ form {
 /* ------- FOOTER ------- */
 
 footer {
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   justify-content: space-between;
   padding: 40px;
 }
@@ -335,3 +243,4 @@ footer > div > ul > li {
   text-decoration: none;
   list-style: none;
 }
+
