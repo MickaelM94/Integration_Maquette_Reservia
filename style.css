@@ -1,4 +1,5 @@
 /* ------- BASIC SECTIONS ------- */
+
 * {
   font-family: "Raleway", sans-serif;
 }
@@ -19,25 +20,54 @@ h2 {
 /* ------- NAV ------- */
 
 nav {
-  display: flex;
-  justify-content: space-between;
+  display: block;
+  padding-top: 30px;
+  margin-bottom: 70px;
 }
 
-nav > ul > li {
-  display: inline;
+.logo {
+  transition-duration: 0.4s;
+}
+
+.logo:hover {
+  filter: grayscale(100%);
+  transition-duration: 0.4s;
+}
+
+.register {
   float: right;
+  font-weight: bold;
+  color: #0065fc;
   text-decoration: none;
-  padding: 20px 30px;
+  margin-top: 10px;
+  transition-duration: 0.4s;
 }
 
-nav > ul > li:hover {
-  padding: 18px 30px;
-  border-top: solid 2px #0065fc;
-}
-
-nav > ul > li > a {
-  text-decoration: none;
+.register:hover {
   color: black;
+  transition-duration: 0.4s;
+}
+
+.linkBlock {
+  display: flex;
+  margin: 0px -30px -30px -30px;
+}
+
+.linkBlock > a {
+  text-decoration: none;
+  display: inline-block;
+  width: 50%;
+  padding: 20px 30px;
+  border-bottom: solid 3px #f2f2f2;
+  color: black;
+  text-align: center;
+  transition-duration: 0.4s;
+}
+
+.linkBlock > a:hover {
+  border-bottom: solid 3px #0065fc;
+  color: #0065fc;
+  transition-duration: 0.4s;
 }
 
 /* ------- SEARCH BAR ------- */
@@ -49,7 +79,7 @@ form {
 }
 
 .searchBar {
-  margin-bottom: 10px;
+  margin: 30px 0px;
 }
 
 .searchIcone {
@@ -63,7 +93,7 @@ form {
 }
 
 .searchText {
-  border: 2px solid #F2F2F2;
+  border: 2px solid #f2f2f2;
   padding: 16px;
   font-size: 18px;
   font-weight: bold;
@@ -76,13 +106,26 @@ form {
 
 .searchBtn {
   border-radius: 15px;
-  background-color: #0065FC;
+  background-color: #0065fc;
   color: white;
   border: none;
   padding: 18px;
   font-size: 18px;
   margin-left: -18px;
   cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.searchBtn:hover {
+  border-radius: 5px;
+  background-color: #0065fc;
+  color: white;
+  border: none;
+  padding: 18px;
+  font-size: 18px;
+  margin-left: -18px;
+  cursor: pointer;
+  transition-duration: 0.4s;
 }
 
 /* ------- FILTER ------- */
@@ -106,8 +149,8 @@ form {
 
 .filterCard:hover {
   display: block;
-  border: 2px solid #DEEBFF;
-  background-color: #DEEBFF;
+  border: 2px solid #deebff;
+  background-color: #deebff;
   border-left: none;
   padding: 16px 18px 16px 0px;
   border-radius: 70px;
@@ -118,9 +161,9 @@ form {
   padding: 18px;
   margin-left: -1px;
   font-size: 18px;
-  background-color: #DEEBFF;
+  background-color: #deebff;
   border-radius: 50px;
-  color: #0065FC;
+  color: #0065fc;
 }
 
 .filterText {
@@ -133,7 +176,7 @@ form {
 
 .filterText:hover {
   text-decoration: none;
-  color: #0065FC;
+  color: #0065fc;
   font-weight: bold;
   margin-left: 10px;
   transition-duration: 0.2s;
@@ -141,7 +184,7 @@ form {
 
 /* ------- POPULAR ------- */
 
-.popularBlock {
+#popularBlock {
   background-color: #f2f2f2;
   padding: 30px;
 }
@@ -160,38 +203,40 @@ form {
 
 .popularCard {
   display: flex;
-  padding: 6px;
+  padding: 4px;
   border-radius: 20px;
   background-color: white;
   width: 100%;
   height: auto;
-  border: 0.5px solid #F2F2F2 ;
-  box-shadow: 2px 4px 7px 7px rgba(113, 113, 113, 0.1);
 }
 
 .popularCard > img {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   object-fit: cover;
-  height: 140px;
-  width: 140px;
+  height: 120px;
+  width: 120px;
 }
 
 .popularCardText {
-  padding: 10px 20px;
+  margin: 10px 20px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
 }
 
-.popularCardText > * {
-  margin: -1px 0px;
+.popularCardText > div > p {
+  margin: 0px;
 }
 
 .popularTitle {
   font-weight: bold;
+  padding-bottom: 5px;
 }
 
 /* ------- HOUSING ------- */
 
-.housingBlock {
+#housingBlock {
   border-radius: 20px;
   padding: 30px;
 }
@@ -203,13 +248,15 @@ form {
   padding: 20px 0px;
 }
 
+.housingList > a {
+  display: inline-block;
+}
+
 .housingCard {
-  padding: 6px;
+  padding: 4px;
   border-radius: 20px;
   background-color: white;
   width: 100%;
-  border: 0.5px solid #F2F2F2 ;
-  box-shadow: 2px 4px 7px 7px rgba(113, 113, 113, 0.1);
 }
 
 .housingCard > img {
@@ -221,11 +268,12 @@ form {
 }
 
 .housingCardText {
-  padding: 5px;
+  padding: 20px 10px 10px 10px;
 }
 
 .housingCardText > * {
-  margin: -1px 0px;
+  display: block;
+  margin-top: -15px;
 }
 
 .housingTitle {
@@ -234,14 +282,15 @@ form {
 
 /* ------- ACTIVITY ------- */
 
-.activityBlock {
-  padding: 0px 30px 30px 30px;
+#activityBlock {
+  padding: 30px;
+  margin-top: -30px;
 }
 
 .activityList {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 25px;
+  row-gap: 10px;
   padding: 20px 0px;
 }
 
@@ -249,8 +298,6 @@ form {
   border-radius: 20px;
   background-color: white;
   width: 100%;
-  border: 0.5px solid #F2F2F2 ;
-  box-shadow: 2px 4px 7px 7px rgba(113, 113, 113, 0.1);
 }
 
 .activityCard > img {
@@ -262,7 +309,7 @@ form {
 }
 
 .activityCardText {
-  padding: 1px 20px;
+  padding: 0px 20px 20px 20px;
   font-weight: bold;
 }
 
@@ -277,7 +324,7 @@ form {
 .infoIcone {
   margin-right: 10px;
   border-radius: 500px;
-  color: #0065FC;
+  color: #0065fc;
 }
 
 .showMore,
@@ -287,14 +334,40 @@ form {
 
 .ratingTrue {
   display: inline;
-  font-size: 10px;
+  font-size: 12px;
   color: blue;
 }
 
 .ratingFalse {
   display: inline;
-  font-size: 10px;
+  font-size: 12px;
   color: lightgrey;
+}
+
+.linkDiv {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  padding-right: 10px;
+}
+
+.activityBlock > .activityList > a {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  margin-right: -20px;
+}
+
+.shadow {
+  box-shadow: 0px 4px 10px 1px #e4e4e4c7;
+  transition-duration: 0.4s;
+}
+
+.shadow:hover {
+  box-shadow: 0px 0px 7px 0px #deebff;
+  transition-duration: 0.4s;
 }
 
 /* ------- FOOTER ------- */
@@ -302,7 +375,7 @@ form {
 footer {
   background-color: #f2f2f2;
   justify-content: space-between;
-  padding: 40px;
+  padding: 40px 40px 20px 40px;
 }
 
 footer > div {
