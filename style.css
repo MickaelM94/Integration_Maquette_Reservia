@@ -20,9 +20,13 @@ h2 {
 /* ------- NAV ------- */
 
 nav {
-  display: block;
   padding-top: 30px;
   margin-bottom: 70px;
+}
+
+.navTop {
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo {
@@ -98,10 +102,12 @@ form {
   font-size: 18px;
   font-weight: bold;
   color: black;
+  outline: none;
 }
 
 .searchText::placeholder {
   color: black;
+  
 }
 
 .searchBtn {
@@ -175,11 +181,7 @@ form {
 }
 
 .filterText:hover {
-  text-decoration: none;
   color: #0065fc;
-  font-weight: bold;
-  margin-left: 10px;
-  transition-duration: 0.2s;
 }
 
 /* ------- POPULAR ------- */
@@ -283,8 +285,7 @@ form {
 /* ------- ACTIVITY ------- */
 
 #activityBlock {
-  padding: 30px;
-  margin-top: -30px;
+  padding: 0px 30px;
 }
 
 .activityList {
