@@ -79,7 +79,6 @@ nav {
 form {
   color: black;
   padding: 10px 0px;
-  width: 100%;
 }
 
 .searchBar {
@@ -103,6 +102,7 @@ form {
   font-weight: bold;
   color: black;
   outline: none;
+  width: 170px;
 }
 
 .searchText::placeholder {
@@ -141,11 +141,10 @@ form {
   flex-wrap: wrap;
   padding: 0px 0px 10px 0px;
   row-gap: 15px;
-  column-gap: 15px;
+  column-gap: 10px;
 }
 
 .filterCard {
-  display: block;
   border: 2px solid #d1d0d0c7;
   border-left: none;
   padding: 16px 18px 16px 0px;
@@ -158,9 +157,6 @@ form {
   border: 2px solid #deebff;
   background-color: #deebff;
   border-left: none;
-  padding: 16px 18px 16px 0px;
-  border-radius: 70px;
-  transition-duration: 0.2s;
 }
 
 .filterIcone {
@@ -221,7 +217,7 @@ form {
 }
 
 .popularCardText {
-  margin: 10px 20px;
+  padding: 10px;
   flex-direction: column;
   display: flex;
   justify-content: space-between;
@@ -229,6 +225,7 @@ form {
 
 .popularCardText > div > p {
   margin: 0px;
+  font-weight: 14px;
 }
 
 .popularTitle {
@@ -276,6 +273,7 @@ form {
 .housingCardText > * {
   display: block;
   margin-top: -15px;
+  font-weight: 14px;
 }
 
 .housingTitle {
@@ -312,6 +310,7 @@ form {
 .activityCardText {
   padding: 0px 20px 20px 20px;
   font-weight: bold;
+  font-weight: 14px;
 }
 
 /* ------- OTHERS ------- */
@@ -409,3 +408,85 @@ footer > div > ul > li {
   text-decoration: none;
   list-style: none;
 }
+
+/* ------- RESPONSIVES ------- */
+
+/** @media screen and (min-width: 1100px) {
+  .containerFlex {
+    display: flex;
+    padding: 30px;
+    column-gap: 15px;
+  }
+
+  #housingBlock {
+    order: 1;
+    background: #f2f2f2;
+    width: 67%;
+  }
+
+  .housingList {
+    column-gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .housingList > a {
+    display: flex;
+    width: 33%;
+  }
+
+  .housingCard {
+  }
+
+  #popularBlock {
+    order: 2;
+    border-radius: 15px;
+    width: 33%;
+  }
+
+} **/
+
+@media screen and (min-width : 730px) {
+
+  .popularCard > img {
+    width: 40%;
+  }
+
+  .housingList {
+    row-gap: 30px;
+    column-gap: 20px;
+  }
+
+  .housingList > a {
+    width: 47%;
+  }
+
+  .activityList {
+    column-gap: 20px;
+    row-gap: 15px;
+  }
+  .activityList > a {
+    width: 47%;
+  }
+
+}
+
+@media screen and (min-width : 900px) {
+
+  .activityList {
+    column-gap: 20px;
+    row-gap: 15px;
+  }
+
+  .activityList > a {
+    width: 22%;
+  }
+
+  .activityCard > img {
+    height: 300px;
+  }
+  
+  .imgFlex {
+    height: 150px;
+  }
+}
+
