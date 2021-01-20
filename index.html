@@ -18,20 +18,23 @@
   </head>
   <body>
     <header>
+      <!-- == NAV BAR -->
       <nav>
-        <a class="logo" href=""
-          ><img src="images/logo/Reservia.svg" alt="Logo de Reservia"
-        /></a>
+        <a class="logo" href="#">
+          <img src="images/logo/Reservia.svg" alt="Logo de Reservia"/>
+        </a>
         <a class="register" href="#">S'inscrire</a>
         <div class="linkBlock">
           <a href="#housingBlock">Hébergements</a>
           <a href="#activityBlock">Activités</a>
         </div>
       </nav>
-
-      <h1>Trouver votre hébergement pour des vacances de rêve</h1>
-      <p>En plein centre ville ou en pleine nature</p>
-
+      <div>
+        <h1>Trouver votre hébergement pour des vacances de rêve</h1>
+      <p>
+        En plein centre ville ou en pleine nature
+      </p>
+      <!-- == SEARCH BAR -->
       <form class="searchBar" action="/search" method="post">
         <label class="searchIcone" for="city"
           ><i class="fas fa-map-marker-alt"></i
@@ -41,43 +44,63 @@
           <i class="fas fa-search"></i>
         </button>
       </form>
-
+      <!-- == FILTER BLOCK -->
       <div class="filterBlock">
         <h3>Filtres</h3>
         <div class="filterList">
+          <!-- FILTER CARD #1 -->
           <div class="filterCard">
-            <span class="filterIcone"
-              ><i class="fas fa-money-bill-wave"></i
-            ></span>
-            <a class="filterText" href="#">Economique</a>
+            <div class="filterIcone">
+              <p><i class="fas fa-money-bill-wave"></i></p>
+            </div>
+            <div class="filterText">
+              <a href="#">Économique</a>
+            </div>
           </div>
-
+          <!-- FILTER CARD #2 -->
           <div class="filterCard">
-            <span class="filterIcone"><i class="fas fa-child"></i></span>
-            <a class="filterText" href="#">Familial</a>
+            <div class="filterIcone">
+              <p><i class="fas fa-child"></i></p>
+            </div>
+            <div class="filterText">
+              <a href="#">Familial</a>
+            </div>
           </div>
-
+          <!-- FILTER CARD #3 -->
           <div class="filterCard">
-            <span class="filterIcone"><i class="fas fa-heart"></i></span>
-            <a class="filterText" href="#">Romantique</a>
+            <div class="filterIcone">
+              <p><i class="fas fa-heart"></i></p>
+            </div>
+            <div class="filterText">
+              <a href="#">Romantique</a>
+            </div>
           </div>
-
+          <!-- FILTER CARD #4 -->
           <div class="filterCard">
-            <span class="filterIcone"><i class="fas fa-dog"></i></span>
-            <a class="filterText" href="#">Animaux autorisés</a>
+            <div class="filterIcone">
+              <p><i class="fas fa-dog"></i></p>
+            </div>
+            <div class="filterText">
+              <a href="#">Animaux autorisés</a>
+            </div>
           </div>
         </div>
       </div>
+      <!-- INFO -->
       <p>
         <span class="infoIcone"><i class="fas fa-info"></i></span> Plus de 500
         logements sont disponibles dans cette ville.
       </p>
+      </div>
     </header>
     <main>
+      <!-- == POPULAR BLOCK -->
       <div class="containerFlex">
         <section id="popularBlock">
-          <h2>Les plus populaires</h2>
-          <span class="popularIcone"><i class="fas fa-chart-line"></i></span>
+          <div class="titleBlock">
+            <h2>Les plus populaires</h2>
+          <p class="popularIcone"><i class="fas fa-chart-line"></i></p>
+          </div>
           <div class="popularList">
             <!-- POPULAR CARD #1 -->
             <a class="linkDiv" href="#" target="_blank">
@@ -157,7 +180,7 @@
             </a>
           </div>
         </section>
-  
+        <!-- == HOUSING BLOCK -->
         <section id="housingBlock">
           <h2>Hébergements à Marseille</h2>
           <div class="housingList">
@@ -302,16 +325,18 @@
               </div>
             </a>
           </div>
-          <p class="showMore">Afficher plus</p>
+          <a class="showMore" href="#">
+            <p >Afficher plus</p>
+          </a>
         </section>
       </div>
-
+      <!-- == ACTIVITY BLOCK -->
       <section id="activityBlock">
         <h2>Activités à Marseille</h2>
         <div class="activityList">
           <!-- ACTIVITY CARD #1 -->
           <a class="linkDiv" href="#" target="_blank">
-            <div class="activityCard shadow">
+            <div class="activityCard twoRows shadow">
               <img
                 src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
                 alt="Image représentant le Vieux Port"
@@ -319,31 +344,31 @@
               <p class="activityCardText">Vieux port</p>
             </div>
           </a>
-          <!-- ACTIVITY CARD #2 -->
-          <a class="linkDiv" href="#" target="_blank">
-            <div class="activityCard  shadow">
-              <img
-                class="imgFlex"
-                src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
-                alt="Image représentant le Fort de Pomègues"
-              />
-              <p class="activityCardText">Fort de Pomègues</p>
-            </div>
-          </a>
-          <!-- ACTIVITY CARD #3 -->
-          <a class="linkDiv" href="#" target="_blank">
-            <div class="activityCard shadow">
-              <img
-                class="imgFlex"
-                src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
-                alt="Image représentant l'Îles du Frioul"
-              />
-              <p class="activityCardText">Îles du Frioul</p>
-            </div>
-          </a>
+          <div class="doubleCard">
+            <!-- ACTIVITY CARD #2 -->
+            <a class="linkDiv" href="#" target="_blank">
+              <div class="activityCard  shadow">
+                <img
+                  src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
+                  alt="Image représentant le Fort de Pomègues"
+                />
+                <p class="activityCardText">Fort de Pomègues</p>
+              </div>
+            </a>
+            <!-- ACTIVITY CARD #3 -->
+            <a class="linkDiv" href="#" target="_blank">
+              <div class="activityCard shadow">
+                <img
+                  src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
+                  alt="Image représentant l'Îles du Frioul"
+                />
+                <p class="activityCardText">Îles du Frioul</p>
+              </div>
+            </a>
+          </div>
           <!-- ACTIVITY CARD #4 -->
           <a class="linkDiv" href="#" target="_blank">
-            <div class="activityCard shadow">
+            <div class="activityCard twoRows shadow">
               <img
                 src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
                 alt="Image représentant le Parc National des Calanques"
@@ -351,55 +376,57 @@
               <p class="activityCardText">Parc National des Calanques</p>
             </div>
           </a>
-          <!-- ACTIVITY CARD #5 -->
-          <a class="linkDiv" href="#" target="_blank">
-            <div class="activityCard shadow">
-              <img
-                class="imgFlex"
-                src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                alt="Image représentant Notre-Dame-de-la-Garde"
-              />
-              <p class="activityCardText">Notre-Dame-de-la-Garde</p>
-            </div>
-          </a>
-          <!-- ACTIVITY CARD #6 -->
-          <a class="linkDiv" href="#" target="_blank">
-            <div class="activityCard shadow">
-              <img
-                class="imgFlex"
-                src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
-                alt="Image représentant le Parc Longchamp"
-              />
-              <p class="activityCardText">Parc Longchamp</p>
-            </div>
-          </a>
+          <div class="doubleCard">
+            <!-- ACTIVITY CARD #5 -->
+            <a class="linkDiv" href="#" target="_blank">
+              <div class="activityCard shadow">
+                <img
+                  src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                  alt="Image représentant Notre-Dame-de-la-Garde"
+                />
+                <p class="activityCardText">Notre-Dame-de-la-Garde</p>
+              </div>
+            </a>
+            <!-- ACTIVITY CARD #6 -->
+            <a class="linkDiv" href="#" target="_blank">
+              <div class="activityCard shadow">
+                <img
+                  src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
+                  alt="Image représentant le Parc Longchamp"
+                />
+                <p class="activityCardText">Parc Longchamp</p>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
-      <footer>
-        <div>
-          <p class="footerTitle">A propos</p>
-          <ul>
-            <li><a href="#">Fonctionnement du site</a></li>
-            <li><a href="#">Conditions générales de vente</a></li>
-            <li><a href="#">Données et confidentialité</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="footerTitle">Nos hébergements</p>
-          <ul>
-            <li><a href="#">Charte qualité </a></li>
-            <li><a href="#">Soumettre votre hôtel</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="footerTitle">Assistance</p>
-          <ul>
-            <li><a href="#">Centre d'aidee</a></li>
-            <li><a href="#">Nous contacter</a></li>
-          </ul>
-        </div>
-        <div></div>
-      </footer>
     </main>
+      <!-- == FOOTER -->
+      <footer>
+        <div class="footerBlock">
+          <div>
+            <p class="footerTitle">A propos</p>
+            <ul>
+              <li><a href="#">Fonctionnement du site</a></li>
+              <li><a href="#">Conditions générales de vente</a></li>
+              <li><a href="#">Données et confidentialité</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footerTitle">Nos hébergements</p>
+            <ul>
+              <li><a href="#">Charte qualité </a></li>
+              <li><a href="#">Soumettre votre hôtel</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footerTitle">Assistance</p>
+            <ul>
+              <li><a href="#">Centre d'aide</a></li>
+              <li><a href="#">Nous contacter</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
   </body>
 </html>

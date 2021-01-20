@@ -1,7 +1,14 @@
-/* ------- BASIC SECTIONS ------- */
+/* 
+  SECTIONS NAVIGATION : CTRL+F "=="
+  RSPONSIVE'S SECTIONS NAVIGATION : CTRL+F "++"
+  BREAK POINTS : 500px / 625px / 710px / 750px / 920px / 1200px
+ */
+
+/* ------- == BASIC SECTIONS ------- */
 
 * {
   font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -9,28 +16,28 @@ body {
   padding: 0px;
 }
 
-header {
+header > div {
   padding: 0px 30px;
 }
 
 h2 {
-  display: inline;
+  margin: 0px;
 }
 
-/* ------- NAV ------- */
+/* ------- == NAV BAR ------- */
 
 nav {
-  padding-top: 30px;
-  margin-bottom: 70px;
-}
-
-.navTop {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 140px;
 }
 
 .logo {
   transition-duration: 0.4s;
+  grid-column: 1;
+  grid-row: 1;
+  margin: 30px 0px 0px 30px;
 }
 
 .logo:hover {
@@ -39,12 +46,13 @@ nav {
 }
 
 .register {
-  float: right;
   font-weight: bold;
   color: #0065fc;
   text-decoration: none;
-  margin-top: 10px;
+  margin: 45px 30px 0px 20px;
   transition-duration: 0.4s;
+  grid-column: 4;
+  grid-row: 1;
 }
 
 .register:hover {
@@ -54,14 +62,18 @@ nav {
 
 .linkBlock {
   display: flex;
-  margin: 0px -30px -30px -30px;
+  grid-column: 1/5;
+  justify-content: flex-end;
+  grid-row: 2;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .linkBlock > a {
   text-decoration: none;
   display: inline-block;
-  width: 50%;
-  padding: 20px 30px;
+  width: 100%;
+  height: 40px;
   border-bottom: solid 3px #f2f2f2;
   color: black;
   text-align: center;
@@ -74,15 +86,14 @@ nav {
   transition-duration: 0.4s;
 }
 
-/* ------- SEARCH BAR ------- */
+/* ------- == SEARCH BAR ------- */
 
 form {
   color: black;
-  padding: 10px 0px;
 }
 
 .searchBar {
-  margin: 30px 0px;
+  margin-bottom: 30px;
 }
 
 .searchIcone {
@@ -102,12 +113,11 @@ form {
   font-weight: bold;
   color: black;
   outline: none;
-  width: 170px;
+  width: 200px;
 }
 
 .searchText::placeholder {
   color: black;
-  
 }
 
 .searchBtn {
@@ -134,7 +144,7 @@ form {
   transition-duration: 0.4s;
 }
 
-/* ------- FILTER ------- */
+/* ------- == FILTER ------- */
 
 .filterList {
   display: flex;
@@ -146,50 +156,68 @@ form {
 
 .filterCard {
   border: 2px solid #d1d0d0c7;
-  border-left: none;
-  padding: 16px 18px 16px 0px;
   border-radius: 70px;
   transition-duration: 0.2s;
+  height: 50px;
+  display: flex;
 }
 
 .filterCard:hover {
-  display: block;
   border: 2px solid #deebff;
   background-color: #deebff;
-  border-left: none;
 }
 
 .filterIcone {
-  padding: 18px;
-  margin-left: -1px;
-  font-size: 18px;
   background-color: #deebff;
-  border-radius: 50px;
+  border-radius: 70px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  position: relative;
+  left: -2px;
+  top: -2px;
+}
+
+.filterIcone > p {
+  margin: auto;
+  font-size: 18px;
   color: #0065fc;
 }
 
 .filterText {
+  display: flex;
+}
+
+.filterText > a {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  margin-left: 10px;
+  padding: 13px 15px 0px 10px;
+  height: 100%;
+  width: 100%;
   transition-duration: 0.2s;
 }
 
-.filterText:hover {
+.filterText > a:hover {
   color: #0065fc;
 }
 
-/* ------- POPULAR ------- */
+/* ------- == POPULAR ------- */
 
 #popularBlock {
   background-color: #f2f2f2;
-  padding: 30px;
+  padding: 40px 30px;
+}
+
+.titleBlock {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
 }
 
 .popularIcone {
-  float: right;
   font-size: 24px;
+  margin: 0px;
 }
 
 .popularList {
@@ -204,8 +232,8 @@ form {
   padding: 4px;
   border-radius: 20px;
   background-color: white;
-  width: 100%;
   height: auto;
+  width: 100%;
 }
 
 .popularCard > img {
@@ -217,15 +245,14 @@ form {
 }
 
 .popularCardText {
-  padding: 10px;
   flex-direction: column;
   display: flex;
   justify-content: space-between;
+  padding: 10px 10px 10px 20px;
 }
 
-.popularCardText > div > p {
+.popularCardText p {
   margin: 0px;
-  font-weight: 14px;
 }
 
 .popularTitle {
@@ -233,18 +260,18 @@ form {
   padding-bottom: 5px;
 }
 
-/* ------- HOUSING ------- */
+/* ------- == HOUSING ------- */
 
 #housingBlock {
   border-radius: 20px;
-  padding: 30px;
+  padding: 40px 30px 0px 30px;
 }
 
 .housingList {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 15px;
   padding: 20px 0px;
+  row-gap: 15px;
 }
 
 .housingList > a {
@@ -273,24 +300,28 @@ form {
 .housingCardText > * {
   display: block;
   margin-top: -15px;
-  font-weight: 14px;
+  font-size: 14px;
 }
 
 .housingTitle {
   font-weight: bold;
 }
 
-/* ------- ACTIVITY ------- */
+/* ------- == ACTIVITY ------- */
 
 #activityBlock {
-  padding: 0px 30px;
+  padding: 40px 30px 30px 30px;
 }
 
 .activityList {
   display: flex;
   flex-wrap: wrap;
   row-gap: 10px;
-  padding: 20px 0px;
+  padding-top: 30px;
+}
+
+.doubleCard {
+  display: contents;
 }
 
 .activityCard {
@@ -310,10 +341,10 @@ form {
 .activityCardText {
   padding: 0px 20px 20px 20px;
   font-weight: bold;
-  font-weight: 14px;
+  font-size: 14px;
 }
 
-/* ------- OTHERS ------- */
+/* ------- == OTHERS ------- */
 
 .filters {
   width: auto;
@@ -327,7 +358,20 @@ form {
   color: #0065fc;
 }
 
-.showMore,
+.showMore {
+  font-size: 18px;
+  margin-bottom: 0px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  transition-duration: 0.2s;
+}
+
+.showMore:hover {
+  color: #0065fc;
+  transition-duration: 0.2s;
+}
+
 .price {
   font-weight: bold;
 }
@@ -345,11 +389,10 @@ form {
 }
 
 .linkDiv {
-  height: 100%;
+  height: auto;
   width: 100%;
   text-decoration: none;
   color: black;
-  padding-right: 10px;
 }
 
 .activityBlock > .activityList > a {
@@ -370,7 +413,7 @@ form {
   transition-duration: 0.4s;
 }
 
-/* ------- FOOTER ------- */
+/* ------- == FOOTER ------- */
 
 footer {
   background-color: #f2f2f2;
@@ -378,8 +421,8 @@ footer {
   padding: 40px 40px 20px 40px;
 }
 
-footer > div {
-  margin-bottom: 40px;
+.footerBlock > div {
+  margin-bottom: 30px;
 }
 
 .footerTitle {
@@ -387,106 +430,280 @@ footer > div {
   margin-bottom: 10px;
 }
 
-footer > div > ul {
+.footerBlock > div > ul {
   margin-left: -40px;
 }
 
-footer > div > ul > li > a {
+.footerBlock > div > ul > li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.footerBlock > div > ul > li > a {
   text-decoration: none;
   line-height: 25px;
   color: black;
   transition-duration: 0.2s;
 }
 
-footer > div > ul > li > a:hover {
+.footerBlock > div > ul > li > a:hover {
   text-decoration: none;
   line-height: 25px;
   color: grey;
 }
 
-footer > div > ul > li {
-  text-decoration: none;
-  list-style: none;
-}
-
 /* ------- RESPONSIVES ------- */
 
-/** @media screen and (min-width: 1100px) {
-  .containerFlex {
-    display: flex;
-    padding: 30px;
-    column-gap: 15px;
+@media screen and (min-width: 500px) {
+
+  /* ------- ++ POPULAR 500px ------- */
+
+  .popularList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
   }
+
+  .popularList > * {
+    display: flex;
+  }
+
+  .popularCard {
+    display: block;
+  }
+
+  .popularCard > img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0px;
+    object-fit: cover;
+    height: 120px;
+    width: 100%;
+  }
+
+  .popularCardText {
+    padding: 10px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .popularCardText > div > p {
+    margin: 0px;
+    font-size: 14px;
+  }
+
+  .popularTitle {
+    font-weight: bold;
+    padding-bottom: 5px;
+    height: 40px;
+  }
+
+  /* ------- ++ HOUSING 500px ------- */
+
+  .housingList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  /* ------- ++ ACTIVITY 500px ------- */
+
+  .activityList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 10px;
+  }
+
+  .activityCardText {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 625px) {
+
+  /* ------- ++ NAV BAR 625px ------- */
+
+  nav {
+    grid-template-rows: 1fr;
+    height: auto;  
+  }
+
+  .linkBlock {
+    grid-column: 3/4;
+    grid-row: 1;
+    margin: 0px;
+    padding: 0px;
+    width: fit-content;
+  }
+
+  .linkBlock > a {
+    width: auto;
+    border-bottom: none;
+    border-top: solid 3px #fff;
+    padding: 42px 20px 0px 20px;
+  }
+
+  .linkBlock > a:hover {
+    border-top: solid 3px #0065fc;
+    color: #0065fc;
+    border-bottom: none;
+    transition-duration: 0.4s;
+  }
+
+  /* ------- ++ ACTIVITY 625px ------- */
+
+  .activityCardText {
+    height: auto;
+  }
+
+}
+
+@media screen and (min-width: 710px) {
+
+  /* ------- ++ POPULAR 710px ------- */
+
+  .popularTitle {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 750px){
+
+  /* ------- ++ POPULAR 750px ------- */
+
+  .popularList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  .popularTitle {
+    height: 40px;
+  }
+
+  /* ------- ++ HOUSING 750px ------- */
+
+  .housingList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  /* ------- ++ ACTIVITY 750px ------- */
+
+  .activityList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 10px;
+  }
+
+  .activityCardText {
+    height: auto;
+  }
+
+   /* ------- ++ FOOTER 750px ------- */
+
+   .footerBlock {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+  }
+}
+
+@media screen and (min-width: 920px) {
+
+   /* ------- ++ FILTER 920px ------- */
+
+   .filterBlock {
+    display: flex;
+  }
+
+  .filterBlock > h3 {
+    margin: 15px 15px 0px 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  .containerFlex {
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns:  2fr 1fr;
+    column-gap: 30px;
+    width: 100%;
+  }
+
+  /* ------- ++ HOUSING 1200px ------- */
 
   #housingBlock {
     order: 1;
-    background: #f2f2f2;
-    width: 67%;
+    background-color: #f2f2f2;
   }
 
-  .housingList {
-    column-gap: 15px;
-    flex-wrap: wrap;
+  .housingCard > img {
+    height: 100px;
   }
 
-  .housingList > a {
-    display: flex;
-    width: 33%;
-  }
-
-  .housingCard {
-  }
+  /* ------- ++ POPULAR 1200px ------- */
 
   #popularBlock {
     order: 2;
     border-radius: 15px;
-    width: 33%;
   }
 
-} **/
+  .popularList {
+    display: flex;
+    row-gap: 30px;
+  }
 
-@media screen and (min-width : 730px) {
+  .popularList > a {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .popularCard {
+    display: flex;
+  }
 
   .popularCard > img {
-    width: 40%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    object-fit: cover;
+    height: 120px;
+    width: 120px;
   }
 
-  .housingList {
-    row-gap: 30px;
-    column-gap: 20px;
+  .popularTitle {
+    height: auto;
   }
 
-  .housingList > a {
-    width: 47%;
+  /* ------- ++ ACTIVITY 1200px ------- */
+
+  #activityBlock {
+    order: 3;
+    padding-top: 30px;
   }
 
   .activityList {
-    column-gap: 20px;
-    row-gap: 15px;
-  }
-  .activityList > a {
-    width: 47%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 
-}
-
-@media screen and (min-width : 900px) {
-
-  .activityList {
-    column-gap: 20px;
-    row-gap: 15px;
+  .twoRows > img {
+    height: 375px;
   }
 
-  .activityList > a {
-    width: 22%;
-  }
-
-  .activityCard > img {
-    height: 300px;
-  }
-  
-  .imgFlex {
-    height: 150px;
+  .doubleCard {
+    display: flex;
+    flex-direction: column;
   }
 }
-
