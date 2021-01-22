@@ -421,7 +421,7 @@ footer {
   padding: 40px 40px 20px 40px;
 }
 
-.footerBlock > div {
+.footerBlock > ul {
   margin-bottom: 30px;
 }
 
@@ -430,23 +430,20 @@ footer {
   margin-bottom: 10px;
 }
 
-.footerBlock > div > ul {
+.footerBlock > ul > li {
+  text-decoration: none;
+  list-style: none;
   margin-left: -40px;
 }
 
-.footerBlock > div > ul > li {
-  text-decoration: none;
-  list-style: none;
-}
-
-.footerBlock > div > ul > li > a {
+.footerBlock > ul > li > a {
   text-decoration: none;
   line-height: 25px;
   color: black;
   transition-duration: 0.2s;
 }
 
-.footerBlock > div > ul > li > a:hover {
+.footerBlock > ul > li > a:hover {
   text-decoration: none;
   line-height: 25px;
   color: grey;
@@ -537,7 +534,6 @@ footer {
     grid-row: 1;
     margin: 0px;
     padding: 0px;
-    width: fit-content;
   }
 
   .linkBlock > a {
@@ -612,8 +608,8 @@ footer {
 
    .footerBlock {
     display: flex;
-    justify-content: space-between;
     max-width: 900px;
+    justify-content: space-between;
   }
 }
 
@@ -627,6 +623,12 @@ footer {
 
   .filterBlock > h3 {
     margin: 15px 15px 0px 0px;
+  }
+
+     /* ------- ++ FOOTER 920px ------- */
+
+  .footerBlock ul {
+    min-width: 250px;
   }
 }
 
@@ -699,11 +701,41 @@ footer {
   }
 
   .twoRows > img {
-    height: 375px;
+    height: 370px;
   }
 
   .doubleCard {
     display: flex;
     flex-direction: column;
+  }
+
+   /* ------- ++ FOOTER 1200px ------- */
+
+   .footerBlock ul {
+    min-width: 380px;
+  }
+}
+
+@media screen and (min-width : 1500px){
+
+  .maxWidth {
+    max-width: 1500px;
+    margin: auto;
+  }
+
+  /* ------- ++ FOOTER 1500px ------- */
+
+  .footerBlock {
+    width: auto;
+    justify-content: center;
+  }
+
+  .footerBlock > ul {
+    min-width: fit-content;
+    margin: 0px 30px 40px 40px;
+  }
+  
+  li {
+    display:list-item;
   }
 }

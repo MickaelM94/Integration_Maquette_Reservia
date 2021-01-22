@@ -17,11 +17,11 @@
     />
   </head>
   <body>
-    <header>
+    <header class="maxWidth">
       <!-- == NAV BAR -->
       <nav>
         <a class="logo" href="#">
-          <img src="images/logo/Reservia.svg" alt="Logo de Reservia"/>
+          <img src="images/logo/Reservia.svg" alt="Logo de Reservia" />
         </a>
         <a class="register" href="#">S'inscrire</a>
         <div class="linkBlock">
@@ -31,75 +31,78 @@
       </nav>
       <div>
         <h1>Trouver votre hébergement pour des vacances de rêve</h1>
-      <p>
-        En plein centre ville ou en pleine nature
-      </p>
-      <!-- == SEARCH BAR -->
-      <form class="searchBar" action="/search" method="post">
-        <label class="searchIcone" for="city"
-          ><i class="fas fa-map-marker-alt"></i
-        ></label>
-        <input class="searchText" id="city" type="text" placeholder="Marseille, France" />
-        <button class="searchBtn" type="submit">
-          <i class="fas fa-search"></i>
-        </button>
-      </form>
-      <!-- == FILTER BLOCK -->
-      <div class="filterBlock">
-        <h3>Filtres</h3>
-        <div class="filterList">
-          <!-- FILTER CARD #1 -->
-          <div class="filterCard">
-            <div class="filterIcone">
-              <p><i class="fas fa-money-bill-wave"></i></p>
+        <p>En plein centre ville ou en pleine nature</p>
+        <!-- == SEARCH BAR -->
+        <form class="searchBar" action="/search" method="post">
+          <label class="searchIcone" for="city"
+            ><i class="fas fa-map-marker-alt"></i
+          ></label>
+          <input
+            class="searchText"
+            id="city"
+            type="text"
+            placeholder="Marseille, France"
+          />
+          <button class="searchBtn" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <!-- == FILTER BLOCK -->
+        <div class="filterBlock">
+          <h3>Filtres</h3>
+          <div class="filterList">
+            <!-- FILTER CARD #1 -->
+            <div class="filterCard">
+              <div class="filterIcone">
+                <p><i class="fas fa-money-bill-wave"></i></p>
+              </div>
+              <div class="filterText">
+                <a href="#">Économique</a>
+              </div>
             </div>
-            <div class="filterText">
-              <a href="#">Économique</a>
+            <!-- FILTER CARD #2 -->
+            <div class="filterCard">
+              <div class="filterIcone">
+                <p><i class="fas fa-child"></i></p>
+              </div>
+              <div class="filterText">
+                <a href="#">Familial</a>
+              </div>
             </div>
-          </div>
-          <!-- FILTER CARD #2 -->
-          <div class="filterCard">
-            <div class="filterIcone">
-              <p><i class="fas fa-child"></i></p>
+            <!-- FILTER CARD #3 -->
+            <div class="filterCard">
+              <div class="filterIcone">
+                <p><i class="fas fa-heart"></i></p>
+              </div>
+              <div class="filterText">
+                <a href="#">Romantique</a>
+              </div>
             </div>
-            <div class="filterText">
-              <a href="#">Familial</a>
-            </div>
-          </div>
-          <!-- FILTER CARD #3 -->
-          <div class="filterCard">
-            <div class="filterIcone">
-              <p><i class="fas fa-heart"></i></p>
-            </div>
-            <div class="filterText">
-              <a href="#">Romantique</a>
-            </div>
-          </div>
-          <!-- FILTER CARD #4 -->
-          <div class="filterCard">
-            <div class="filterIcone">
-              <p><i class="fas fa-dog"></i></p>
-            </div>
-            <div class="filterText">
-              <a href="#">Animaux autorisés</a>
+            <!-- FILTER CARD #4 -->
+            <div class="filterCard">
+              <div class="filterIcone">
+                <p><i class="fas fa-dog"></i></p>
+              </div>
+              <div class="filterText">
+                <a href="#">Animaux autorisés</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- INFO -->
-      <p>
-        <span class="infoIcone"><i class="fas fa-info"></i></span> Plus de 500
-        logements sont disponibles dans cette ville.
-      </p>
+        <!-- INFO -->
+        <p>
+          <span class="infoIcone"><i class="fas fa-info"></i></span> Plus de 500
+          logements sont disponibles dans cette ville.
+        </p>
       </div>
     </header>
-    <main>
+    <main class="maxWidth">
       <!-- == POPULAR BLOCK -->
       <div class="containerFlex">
         <section id="popularBlock">
           <div class="titleBlock">
             <h2>Les plus populaires</h2>
-          <p class="popularIcone"><i class="fas fa-chart-line"></i></p>
+            <p class="popularIcone"><i class="fas fa-chart-line"></i></p>
           </div>
           <div class="popularList">
             <!-- POPULAR CARD #1 -->
@@ -135,7 +138,9 @@
                 />
                 <div class="popularCardText">
                   <div>
-                    <p class="popularTitle">Au coeur de l'eau Chambres d'hôtes</p>
+                    <p class="popularTitle">
+                      Au coeur de l'eau Chambres d'hôtes
+                    </p>
                     <p>Nuit à partir de <span class="price">71€</span></p>
                   </div>
                   <div class="rating">
@@ -326,7 +331,7 @@
             </a>
           </div>
           <a class="showMore" href="#">
-            <p >Afficher plus</p>
+            <p>Afficher plus</p>
           </a>
         </section>
       </div>
@@ -347,7 +352,7 @@
           <div class="doubleCard">
             <!-- ACTIVITY CARD #2 -->
             <a class="linkDiv" href="#" target="_blank">
-              <div class="activityCard  shadow">
+              <div class="activityCard shadow">
                 <img
                   src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
                   alt="Image représentant le Fort de Pomègues"
@@ -401,32 +406,26 @@
         </div>
       </section>
     </main>
-      <!-- == FOOTER -->
-      <footer>
-        <div class="footerBlock">
-          <div>
-            <p class="footerTitle">A propos</p>
-            <ul>
-              <li><a href="#">Fonctionnement du site</a></li>
-              <li><a href="#">Conditions générales de vente</a></li>
-              <li><a href="#">Données et confidentialité</a></li>
-            </ul>
-          </div>
-          <div>
-            <p class="footerTitle">Nos hébergements</p>
-            <ul>
-              <li><a href="#">Charte qualité </a></li>
-              <li><a href="#">Soumettre votre hôtel</a></li>
-            </ul>
-          </div>
-          <div>
-            <p class="footerTitle">Assistance</p>
-            <ul>
-              <li><a href="#">Centre d'aide</a></li>
-              <li><a href="#">Nous contacter</a></li>
-            </ul>
-          </div>
-        </div>
-      </footer>
+    <!-- == FOOTER -->
+    <footer>
+      <div class="footerBlock maxWidth">
+        <ul>
+          <li><p class="footerTitle">A propos</p></li>
+          <li><a href="#">Fonctionnement du site</a></li>
+          <li><a href="#">Conditions générales de vente</a></li>
+          <li><a href="#">Données et confidentialité</a></li>
+        </ul>
+        <ul>
+          <li><p class="footerTitle">Nos hébergements</p></li>
+          <li><a href="#">Charte qualité </a></li>
+          <li><a href="#">Soumettre votre hôtel</a></li>
+        </ul>
+        <ul>
+          <li><p class="footerTitle">Assistance</p></li>
+          <li><a href="#">Centre d'aide</a></li>
+          <li><a href="#">Nous contacter</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
