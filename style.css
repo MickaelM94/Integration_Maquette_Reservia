@@ -299,7 +299,7 @@ form {
 
 .housingCardText > * {
   display: block;
-  margin-top: -15px;
+  margin-top: -12px;
   font-size: 14px;
 }
 
@@ -356,6 +356,10 @@ form {
   margin-right: 10px;
   border-radius: 500px;
   color: #0065fc;
+}
+
+.maxDevice {
+  display: none;
 }
 
 .showMore {
@@ -548,6 +552,21 @@ footer {
     color: #0065fc;
     border-bottom: none;
     transition-duration: 0.4s;
+  }
+
+  /* ------- ++ SEARCH BAR 625px ------- */
+
+  .searchBtn {
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+  }
+
+  .minDevice {
+    display: none;
+  }
+
+  .maxDevice {
+    display:inline
   }
 
   /* ------- ++ ACTIVITY 625px ------- */
